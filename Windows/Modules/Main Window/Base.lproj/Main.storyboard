@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +21,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yE0-cf-3le" userLabel="Status Bar Background">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="Color"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiple UIWindow's" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWc-pt-YVo">
                                 <rect key="frame" x="16" y="36" width="343" height="29"/>
@@ -35,11 +36,21 @@
                                     <action selector="toggleStatusBarStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H18-e5-atT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D46-rI-FW7">
+                                <rect key="frame" x="109" y="159" width="157" height="30"/>
+                                <state key="normal" title="Toggle custom window"/>
+                                <connections>
+                                    <action selector="toggleCustomWindow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdq-Js-ubW"/>
+                                    <action selector="toggleStatusBarStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmA-3y-Lz0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="yE0-cf-3le" secondAttribute="bottom" id="4SF-ly-bp1"/>
+                            <constraint firstItem="D46-rI-FW7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UuW-DN-Y9r"/>
                             <constraint firstItem="SWc-pt-YVo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Wmf-eX-hMY"/>
+                            <constraint firstItem="D46-rI-FW7" firstAttribute="top" secondItem="5Il-0Y-ICc" secondAttribute="bottom" constant="32" id="a6z-hm-BNM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yE0-cf-3le" secondAttribute="trailing" id="ccv-4J-Yo7"/>
                             <constraint firstItem="yE0-cf-3le" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dam-1G-3jk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SWc-pt-YVo" secondAttribute="trailing" constant="16" id="kGa-nk-FxL"/>
@@ -55,4 +66,9 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Color">
+            <color name="systemRedColor" catalog="System" colorSpace="catalog"/>
+        </namedColor>
+    </resources>
 </document>

@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Windows
+
+    private let windowManager = CustomWindowManager()
+
+    @IBAction func toggleCustomWindow(_ sender: UIButton) {
+        windowManager.toggleWindow()
+    }
+
     // MARK: - Actions
 
     @IBAction func toggleStatusBarStyle(_ sender: UIButton) {
