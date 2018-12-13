@@ -23,31 +23,42 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                 <color key="backgroundColor" name="Color"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiple UIWindow's" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWc-pt-YVo">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiple UIWindow's" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWc-pt-YVo">
                                 <rect key="frame" x="16" y="36" width="343" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Il-0Y-ICc">
-                                <rect key="frame" x="109.5" y="97" width="156" height="30"/>
+                                <rect key="frame" x="103" y="97" width="169" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <state key="normal" title="Toggle status bar style"/>
                                 <connections>
                                     <action selector="toggleStatusBarStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H18-e5-atT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D46-rI-FW7">
-                                <rect key="frame" x="109" y="159" width="157" height="30"/>
+                                <rect key="frame" x="102" y="161" width="171" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <state key="normal" title="Toggle custom window"/>
                                 <connections>
                                     <action selector="toggleCustomWindow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kdq-Js-ubW"/>
                                     <action selector="toggleStatusBarStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmA-3y-Lz0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IO1-3E-BXL">
+                                <rect key="frame" x="32" y="225" width="311" height="101.5"/>
+                                <string key="text">You can toggle the status bar on the controller that resides inside the main UIWindow. But once you show the custom UIWindow, this will have no effect.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="yE0-cf-3le" secondAttribute="bottom" id="4SF-ly-bp1"/>
+                            <constraint firstItem="IO1-3E-BXL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="8li-gl-JlG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IO1-3E-BXL" secondAttribute="trailing" constant="32" id="H8L-Ss-C4R"/>
                             <constraint firstItem="D46-rI-FW7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UuW-DN-Y9r"/>
                             <constraint firstItem="SWc-pt-YVo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Wmf-eX-hMY"/>
                             <constraint firstItem="D46-rI-FW7" firstAttribute="top" secondItem="5Il-0Y-ICc" secondAttribute="bottom" constant="32" id="a6z-hm-BNM"/>
@@ -55,9 +66,11 @@
                             <constraint firstItem="yE0-cf-3le" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dam-1G-3jk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SWc-pt-YVo" secondAttribute="trailing" constant="16" id="kGa-nk-FxL"/>
                             <constraint firstItem="5Il-0Y-ICc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="m0F-TI-2nB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IO1-3E-BXL" secondAttribute="bottom" constant="32" id="n5q-7A-dP7"/>
                             <constraint firstItem="SWc-pt-YVo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="o47-MT-1NB"/>
                             <constraint firstItem="5Il-0Y-ICc" firstAttribute="top" secondItem="SWc-pt-YVo" secondAttribute="bottom" constant="32" id="pou-gH-DKX"/>
                             <constraint firstItem="yE0-cf-3le" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="w9H-Sw-5Zr"/>
+                            <constraint firstItem="IO1-3E-BXL" firstAttribute="top" secondItem="D46-rI-FW7" secondAttribute="bottom" constant="32" id="x5M-Mn-nkG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -68,7 +81,7 @@
     </scenes>
     <resources>
         <namedColor name="Color">
-            <color name="systemRedColor" catalog="System" colorSpace="catalog"/>
+            <color red="1" green="0.31000000238418579" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
